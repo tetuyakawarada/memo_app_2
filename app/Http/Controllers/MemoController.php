@@ -14,6 +14,25 @@ class MemoController extends Controller
     }
 
 
+    public function create()
+    {
+        return view('memos.create');
+    }
+
+
+    public function store(Request $request)
+    {
+        $memo = new Memo;
+
+        $memo->title = $request->title;
+        $memo->body = $request->body;
+
+        $memo->save();
+
+        return redirect('/memos');
+    }
+
+
     public function show($id)
     {
         $memo = Memo::find($id);
