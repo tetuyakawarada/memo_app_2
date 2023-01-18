@@ -4,3 +4,19 @@
     width: 300px;
     height: 100px;
 }
+
+h1 {
+    color: blue;
+}
+
+label {
+    display: block;
+}
+
+.button-group {
+    display: flex;
+}
+
+.button-group>*:not(:last-child) {
+    margin-right: 10px;
+}
